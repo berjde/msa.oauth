@@ -1,0 +1,23 @@
+spring :
+  profiles:
+    active: local
+
+
+---
+spring:
+  profiles: local
+
+  dataSource:
+    url: jdbc:mysql://db.generalfactory.co.kr:3306/user?useUnicode=true&charaterEncoding=utf-8
+    username: cp
+    password: cp2020!!
+
+security:
+  jwt:
+    key-store: classpath:keystore.jks
+    key-store-password: a1234567
+    key-pair-alias: server
+    key-pair-password: a1234567
+
+server:
+  port: 8095
